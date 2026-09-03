@@ -33,16 +33,16 @@ def describe_game(name):
     #meaning, if we do not already have this user's name,
     #then they are a new player and we need to get their name
     if name != "":  #quotation mark means not equal but we no its empty
-      print("n\Thank you for playing again, ()!".format(name)) #so this wont fire off
+      print("\nThank you for playing again, {}!".format(name)) #so this wont fire off
     else: #since the above is empty thats why we use the else statement here
         stop = True
         while stop:
             if name == "":
                 name = input("\nWhat is your name? \n>>> ").capitalize()
                 if name != "":
-                    print("\nWelcome, ()!".format(name))
+                    print("\nWelcome, {}!".format(name))
                     print("\nIn this gameyou will be greeted \nby several people. \nyou can choose to be nice or mean")
-                    print("but at the end of the game your fate \nwill be sealed by your actions.")
+                    print("\nbut at the end of the game your fate \nwill be sealed by your actions.")
                     stop = False
                     
     return name
@@ -56,10 +56,10 @@ def nice_mean(nice,mean,name):
             print("\nThe stranger walks away smiling...")
             nice = (nice + 1)
             stop = False
-            if pick == "m":
-                print("\nThe stranger glares at you \nmenacingly and storms off...")
-                mean = (mean + 1)
-                stop = False
+        if pick == "m":
+            print("\nThe stranger glares at you \nmenacingly and storms off...")
+            mean = (mean + 1)
+            stop = False
     score(nice,mean,name) # pass the 3 vairbles to the score
 
 
